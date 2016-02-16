@@ -1,0 +1,33 @@
+//
+//  BBProject-Prefix.pch
+//  BBProject
+//
+//  Created by qthd on 16/1/12.
+//  Copyright © 2016年 蜻蜓互动. All rights reserved.
+//
+
+#ifndef BBProject_Prefix_pch
+#define BBProject_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#import "CocoaLumberjack.h"         //DDLog
+#import "UIImage+ImageNamed_Hack.h" //UIImage类别
+#import "NSString+King.h"           //NSString类别
+#import "MBProgressHUD+Show.h"      //MBProgressHUD类别
+#import "KWarnLabel.h"              //自定义角标label
+#import "Common.h"                  //工程中用到的宏定义
+#import "urlConfig.h"               //请求地址
+#import "BBApolloProtocol.h"        //数据打包/解析
+
+    //打印日志的等级
+    #ifdef DEBUG
+        static  DDLogLevel ddLogLevel = DDLogLevelInfo;
+    #else
+        static  DDLogLevel ddLogLevel = DDLogLevelInfo;
+    #endif
+#endif
+
+#endif /* BBProject_Prefix_pch */
